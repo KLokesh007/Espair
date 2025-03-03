@@ -1,0 +1,70 @@
+.hero-container {
+    background: #B4BFC5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  /* Left section with horizontal layout */
+  .left-section {
+    display: flex;
+    gap: 15px;
+    width: 65%;
+  }
+  
+  .card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    width: 33%; /* Each card takes equal space */
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+  }
+  
+  .card-content {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: white;
+  }
+  
+  .card-content h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  .card-content p {
+    font-size: 14px;
+  }
+  
+  .card-content button {
+    background: white;
+    color: black;
+    border: none;
+    padding: 5px 10px;
+    margin-top: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+  }
+  
+  /* Right section */
+  .right-section {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .right-section img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
