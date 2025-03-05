@@ -1,70 +1,68 @@
+body{
+  background-color: #B4BFC5;
+}
+
 .hero-container {
-    background: #B4BFC5;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-  }
-  
-  /* Left section with horizontal layout */
-  .left-section {
-    display: flex;
-    gap: 15px;
-    width: 65%;
-  }
-  
-  .card {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-    width: 33%; /* Each card takes equal space */
-  }
-  
-  .card img {
-    width: 100%;
+  display: flex;
+  width: 40%;
+  height: 70vh;
+  margin-left: 70px;
+  background-color: #B4BFC5;
+}
+
+.hero-column {
+  flex: 1;
+  position: relative;
+  background-image: url("https://res.cloudinary.com/dt5grsivq/image/upload/v1741026059/still-life-tech-device_wktyyn.jpg");
+  background-size: cover;
+  background-position: center;
+  margin: 0 19px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.hero-column::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(173, 185, 201, 0.7);
+  z-index: 1;
+}
+
+.vertical-text {
+  position: absolute;
+  /* bottom: 20px; */
+  right: 20px;
+  transform: rotate(-90deg);
+  transform-origin: right bottom;
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  z-index: 2;
+}
+
+/* For better responsiveness */
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column;
     height: auto;
-    display: block;
-    border-radius: 10px;
   }
-  
-  .card-content {
-    position: absolute;
-    bottom: 15px;
-    left: 15px;
-    color: white;
+
+  .hero-column {
+    height: 33vh;
+    margin: 8px 0;
   }
-  
-  .card-content h3 {
-    font-size: 16px;
-    margin-bottom: 5px;
+
+  .vertical-text {
+    transform: rotate(0);
+    bottom: 10px;
+    right: 10px;
+    font-size: 18px;
   }
-  
-  .card-content p {
-    font-size: 14px;
-  }
-  
-  .card-content button {
-    background: white;
-    color: black;
-    border: none;
-    padding: 5px 10px;
-    margin-top: 5px;
-    cursor: pointer;
-    font-size: 14px;
-    border-radius: 5px;
-  }
-  
-  /* Right section */
-  .right-section {
-    width: 30%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .right-section img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-  }
-  
+}
+
