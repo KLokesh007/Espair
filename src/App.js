@@ -5,6 +5,7 @@ import Hero from "./components/hero/hero";
 import ProductSection from "./components/kitchen/her";
 import AirPurifierSection from "./components/airfilter/air";
 import Equipments from "./components/equipments/eq";
+import ProductShowcase from "./components/product/prod";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <ProductSection/>
       <AirPurifierSection/>  
       <Equipments/>
+      <ProductShowcase/>
       
      
       

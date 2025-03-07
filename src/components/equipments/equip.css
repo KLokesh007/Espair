@@ -1,122 +1,221 @@
 .equipments-container {
-    width: 100%;
-    max-width: 1200px;
-    height: 500px;
-    margin: 0 auto;
-    margin-top: 30px;
-    position: relative;
-    font-family: "Arial", sans-serif;
-    overflow: hidden;
-    background-color: #f5f5f5;
+  width: 100%;
+  max-width: 1200px;
+  height: 500px;
+  margin: 0 auto;
+  margin-top: 30px;
+  position: relative;
+  font-family: "Arial", sans-serif;
+  overflow: hidden;
+  background-color: #f5f5f5;
+}
+
+.equipments-header {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  z-index: 10;
+  color: white;
+  max-width: 400px;
+  text-align: left;
+}
+
+.equipments-title {
+  font-size: 42px;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.equipments-subtitle {
+  font-size: 20px;
+  margin: 8px 0 0;
+  font-weight: 300;
+}
+
+.equipments-products {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.equipments-card {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.equipments-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image scales properly */
+  transition: transform 0.3s ease;
+}
+
+.equipments-card:hover .equipments-image {
+  transform: scale(1.05);
+}
+
+.nomad-image2, .t200-image2 {
+  background-image: url("https://res.cloudinary.com/dt5grsivq/image/upload/v1741242822/arrangement-with-sanitary-products_v6qqbf.jpg");
+  background-position: center center;
+}
+
+.equipments-info {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  color: white;
+}
+
+.equipments-product-title {
+  font-size: 28px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.equipments-product-subtitle {
+  font-size: 16px;
+  margin: 5px 0 15px;
+  font-weight: 300;
+}
+
+.equipments-button {
+  background-color: white;
+  color: #333;
+  border: none;
+  padding: 8px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.equipments-button:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.equipments-button:active {
+  transform: translateY(0);
+}
+
+/* Dark overlay for better text visibility */
+.equipments-card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+/* 🔹 Responsive Styles */
+@media screen and (max-width: 1024px) {
+  .equipments-container {
+      height: 400px;
   }
-  
-  .equipments-header {
-    position: absolute;
-    top: 40px;
-    left: 40px;
-    z-index: 10;
-    color: white;
-    max-width: 400px;
-    text-align: left;
-  }
-  
   .equipments-title {
-    font-size: 42px;
-    font-weight: 600;
-    margin: 0;
-    line-height: 1.1;
+      font-size: 36px;
   }
-  
   .equipments-subtitle {
-    font-size: 20px;
-    margin: 8px 0 0;
-    font-weight: 300;
+      font-size: 18px;
   }
-  
-  .equipments-products {
-    display: flex;
-    width: 100%;
-    height: 100%;
-  }
-  
-  .equipments-card {
-    flex: 1;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .equipments-image {
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    transition: transform 0.3s ease;
-  }
-  
-  .equipments-card:hover .equipments-image {
-    transform: scale(1.05);
-  }
-  
-  .nomad-image2 {
-    background-image: url("https://res.cloudinary.com/dt5grsivq/image/upload/v1741242822/arrangement-with-sanitary-products_v6qqbf.jpg");
-    background-position: left center;
-  }
-  
-  .t200-image2 {
-    background-image: url("https://res.cloudinary.com/dt5grsivq/image/upload/v1741242822/arrangement-with-sanitary-products_v6qqbf.jpg");
-    background-position: center center;
-  }
-  
-  
-  
-  .equipments-info {
-    position: absolute;
-    bottom: 30px;
-    left: 30px;
-    color: white;
-  }
-  
   .equipments-product-title {
-    font-size: 28px;
-    font-weight: 600;
-    margin: 0;
+      font-size: 24px;
   }
-  
   .equipments-product-subtitle {
-    font-size: 16px;
-    margin: 5px 0 15px;
-    font-weight: 300;
+      font-size: 14px;
   }
-  
   .equipments-button {
-    background-color: white;
-    color: #333;
-    border: none;
-    padding: 8px 20px;
-    font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    outline: none;
+      font-size: 12px;
+      padding: 6px 16px;
   }
-  
-  .equipments-button:hover {
-    background-color: #f0f0f0;
-    transform: translateY(-2px);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* 🔹 Tablet View */
+@media screen and (max-width: 768px) {
+  .equipments-container {
+      height: auto;
+      padding: 20px;
   }
-  
-  .equipments-button:active {
-    transform: translateY(0);
+  .equipments-header {
+      position: static;
+      text-align: center;
+      margin-bottom: 20px;
+      max-width: 100%;
   }
-  
-  /* For better visibility of text on images */
-  .equipments-card::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 50%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
+  .equipments-products {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      height: auto;
   }
+  .equipments-card {
+      height: auto;
+  }
+  .equipments-image {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+  }
+  .equipments-title {
+      font-size: 32px;
+  }
+  .equipments-subtitle {
+      font-size: 16px;
+  }
+  .equipments-info {
+      bottom: 20px;
+      left: 20px;
+  }
+  .equipments-product-title {
+      font-size: 22px;
+  }
+  .equipments-product-subtitle {
+      font-size: 14px;
+  }
+}
+
+/* 🔹 Mobile View */
+@media screen and (max-width: 480px) {
+  .equipments-header {
+      text-align: center;
+      padding: 10px;
+  }
+  .equipments-title {
+      font-size: 28px;
+  }
+  .equipments-subtitle {
+      font-size: 14px;
+  }
+  .equipments-products {
+      display: grid;
+      grid-template-columns: 1fr;
+  }
+  .equipments-card {
+      height: auto;
+  }
+  .equipments-image {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+  }
+  .equipments-info {
+      bottom: 15px;
+      left: 15px;
+  }
+  .equipments-product-title {
+      font-size: 20px;
+  }
+  .equipments-product-subtitle {
+      font-size: 12px;
+  }
+  .equipments-button {
+      font-size: 12px;
+      padding: 5px 14px;
+  }
+}

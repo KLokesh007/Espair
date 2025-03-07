@@ -1,13 +1,21 @@
-body{
-  background-color: #B4BFC5;
+body {
+  background-color: #b4bfc5;
+}
+
+.outer-container {
+  display: flex;
+  width: 100%;
+  height: 70vh;
+  background-color: #b4bfc5;
 }
 
 .hero-container {
   display: flex;
+  flex-wrap: wrap;
   width: 40%;
-  height: 70vh;
+  height: 100%;
   margin-left: 70px;
-  background-color: #B4BFC5;
+  justify-content: center;
 }
 
 .hero-column {
@@ -19,6 +27,8 @@ body{
   margin: 0 19px;
   border-radius: 4px;
   overflow: hidden;
+  min-width: 150px;
+  max-width: 100%;
 }
 
 .hero-column::before {
@@ -34,7 +44,6 @@ body{
 
 .vertical-text {
   position: absolute;
-  /* bottom: 20px; */
   right: 20px;
   transform: rotate(-90deg);
   transform-origin: right bottom;
@@ -44,25 +53,92 @@ body{
   text-transform: uppercase;
   letter-spacing: 2px;
   z-index: 2;
+  white-space: nowrap;
 }
 
-/* For better responsiveness */
-@media (max-width: 768px) {
+.right-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.right-image-container img {
+  /* width: 50%; */
+  height: 50%;
+  object-fit: cover;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
   .hero-container {
+    width: 50%;
+    margin-left: 50px;
+  }
+
+  .hero-column {
+    margin: 0 10px;
+    min-width: 130px;
+  }
+
+  .vertical-text {
+    font-size: 20px;
+    right: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .outer-container {
     flex-direction: column;
     height: auto;
   }
 
+  .hero-container {
+    width: 90%;
+    margin: 20px auto;
+    justify-content: center;
+  }
+
   .hero-column {
-    height: 33vh;
-    margin: 8px 0;
+    margin: 5px;
+    width: 100%;
+    height: 40vh;
   }
 
   .vertical-text {
-    transform: rotate(0);
-    bottom: 10px;
-    right: 10px;
     font-size: 18px;
+    right: 10px;
+  }
+
+  .right-image-container {
+    height: 300px;
+    margin: 20px 0;
   }
 }
 
+@media (max-width: 480px) {
+  .hero-container {
+    flex-direction: column;
+    width: 100%;
+    margin-left: 0;
+    align-items: center;
+  }
+
+  .hero-column {
+    height: 30vh;
+    margin: 3px 0;
+    width: 90%;
+    min-width: 100px;
+  }
+
+  .vertical-text {
+    font-size: 16px;
+    right: 8px;
+    bottom: 20px;
+  }
+
+  .right-image-container {
+    height: 200px;
+  }
+}
